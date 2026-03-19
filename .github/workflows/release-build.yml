@@ -754,7 +754,6 @@ jobs:
               "${HOME}/${_pkgbase}-build"
           /entrypoint.sh \
             _evmfs="false" \
-            _git="true" \
             TERMUX_VERSION=50 \
             _git_service="github" \
             reallymakepkg \
@@ -801,7 +800,6 @@ jobs:
         run: |
           /entrypoint.sh \
             _evmfs="false" \
-            _git="true" \
             _git_service="github" \
             makepkg \
               --nobuild \

@@ -81,7 +81,7 @@ pkgver="1.0.0.0.0.0.0.0.0.0.1.1"
 _libcrash_bash_pkgver="0.0.0.0.0.1.1.1.1.1"
 _reallymakepkg_pkgver="1.2.4"
 _commit="1a816b213bc6d899b7e2e1f95ec6ce923320b948"
-pkgrel=7
+pkgrel=8
 _pkgdesc=(
   "Fallback Ur."
 )
@@ -155,6 +155,7 @@ _sig_sum="${_gitlab_sum}"
 if [[ "${_evmfs}" == "false" ]]; then
   if [[ "${_git_service}" == "github" ]]; then
     _sum="${_github_sum}"
+    _sig_sum="${_github_sum}"
   fi
 fi
 # Dvorak
