@@ -666,7 +666,7 @@ jobs:
                 "https://github.com/themartiancompany/fur" \
                 "${HOME}/fur-src" || \
             true
-          cd 
+          cd \
             "${HOME}/fur-src"
           /entrypoint.sh \
             make \
