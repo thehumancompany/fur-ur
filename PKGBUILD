@@ -81,7 +81,7 @@ pkgver="1.0.0.0.0.0.0.0.0.0.1.1"
 _libcrash_bash_pkgver="0.0.0.0.0.1.1.1.1.1"
 _reallymakepkg_pkgver="1.2.4"
 _commit="1a816b213bc6d899b7e2e1f95ec6ce923320b948"
-pkgrel=9
+pkgrel=10
 _pkgdesc=(
   "Fallback Ur."
 )
@@ -232,10 +232,6 @@ package_fur() {
     PREFIX="/usr"
     DESTDIR="${pkgdir}"
   )
-  ls
-  tar \
-    xf \
-    "${_tarname}.tar.gz"
   cd \
     "${_tarname}"
   make \
