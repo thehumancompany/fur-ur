@@ -81,7 +81,7 @@ pkgver="1.0.0.0.0.0.0.0.0.0.1.1"
 _libcrash_bash_pkgver="0.0.0.0.0.1.1.1.1.1"
 _reallymakepkg_pkgver="1.2.4"
 _commit="1a816b213bc6d899b7e2e1f95ec6ce923320b948"
-pkgrel=6
+pkgrel=7
 _pkgdesc=(
   "Fallback Ur."
 )
@@ -146,8 +146,17 @@ _tarfile="${_tarname}.${_archive_format}"
 if [[ "${_offline}" == "true" ]]; then
   _url="file://${HOME}/${_pkg}"
 fi
-_sum="2e73776ad5247a7142b84411ff153d7ad95b809e9aa6e0f4d7ba11438bcbc43e"
-_sig_sum="f28d0e2c065450c6934c7aded164a1914927d33273129772b87e1a8b0b666012"
+_github_sum="78a4e8d48440c201f0318200910f1b1e5c6aff4540e519c94f918915152e13a7"
+_gitlab_sum="2e73776ad5247a7142b84411ff153d7ad95b809e9aa6e0f4d7ba11438bcbc43e"
+_github_sig_sum="ae8e31bb153d63baabbd89cce0c0693d56a72db1b5e0fe7c6ebe15fb89a01851"
+_gitlab_sig_sum="f28d0e2c065450c6934c7aded164a1914927d33273129772b87e1a8b0b666012"
+_sum="${_gitlab_sum}"
+_sig_sum="${_gitlab_sum}"
+if [[ "${_evmfs}" == "false" ]]; then
+  if [[ "${_git_service}" == "github" ]]; then
+    _sum="${_github_sum}"
+  fi
+fi
 # Dvorak
 _evmfs_ns="0x87003Bd6C074C713783df04f36517451fF34CBEf"
 # Truocolo
